@@ -12,7 +12,8 @@ const movieSchema = new mongoose.Schema({
         type: String,
     },
     cast: {
-        type: Array,
+        type: mongoose.Schema.Types.ObjectId ,
+        ref: 'Celebrity'
     },
 });
 

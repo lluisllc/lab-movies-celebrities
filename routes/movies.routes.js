@@ -41,10 +41,11 @@ router.get('/movies/:id', (req, res, next) => {
     console.log(id)
 
     Movie.findById(id)
+        .populate('cast')
         .then(movieToEdit => {
 
             console.log("hola", movieToEdit);
-            res.render('movies/movie-details.hbs', movieToEdit);
+            res.render('movies/movie-details.hbs', { movieToEdit });
         })
         .catch(error => next(error));
 });

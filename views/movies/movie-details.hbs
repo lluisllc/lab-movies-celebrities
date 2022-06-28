@@ -1,0 +1,15 @@
+<h2>Movie Details</h2>
+<section>
+<p>Title: {{movieToEdit.title}}</p>
+<p>Genre: {{movieToEdit.genre}}</p>
+<p>Plot: {{movieToEdit.plot}}</p>
+<br>
+{{#each movieToEdit.cast}}
+<p>Cast name: {{this.name}}</p>
+<p>Cast occupation: {{this.occupation}}</p>
+<p>Cast catch phrase: {{this.catchPhrase}}</p>
+{{/each}}
+</section>
+<br>
+<br>
+<a href="/">Back to home!</a>
