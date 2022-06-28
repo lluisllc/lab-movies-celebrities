@@ -13,5 +13,5 @@ const celebSchema = new mongoose.Schema({
     }
 })
 
-const Celebtrity = mongoose.model("Celebtrity", celebSchema)
-module.exports = Celebtrity
+const Celebrity = mongoose.model("Celebtrity", celebSchema)
+module.exports = Celebrity
