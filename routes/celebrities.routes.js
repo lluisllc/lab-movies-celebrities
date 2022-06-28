@@ -16,4 +16,15 @@ router.post('/celebrities/create', (req, res, next) => {
         .then(() => res.redirect('/celebrities'))
         .catch(error => res.render('celebrities/new-celebrity'));
 });
+
+router.get('/celebrities', (req, res, next) => {
+    // Iteration #2: List the celebs
+    Celebrity.find()
+        .then(response => {
+            console.log("hola", { response });
+            res.render("celebrities/celebrities.hbs", { response });
+        })
+        .catch(error => console.log(error));
+});
+
 module.exports = router;
