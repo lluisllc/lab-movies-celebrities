@@ -8,7 +8,7 @@ require('../db');
 router.get("/movies/create", (req, res, next) =>
     Celebrity.find()
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             res.render("movies/new-movie", { response });
         })
         .catch((err) => {
