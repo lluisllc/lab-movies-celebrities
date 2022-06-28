@@ -13,8 +13,13 @@
     <input type="text" name="plot" />
   </label>
 
-  <label> Cast:
-    <input type="text" name="cast" />
+<label> Cast:
+  <select name="cast" id="cast" multiple>
+    {{#each response}}
+  <option value="{{name}}">{{this.name}}</option>
+    {{/each}}
+</select>
+  
   </label>
     
   <button type="submit"> Create </button>
